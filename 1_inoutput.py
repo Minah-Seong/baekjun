@@ -53,7 +53,16 @@ print(trd)
 print(fst + 10 * snd + 100 * trd)
 
 
+# ??! (10926)
 
+x = input()
+print(x+'??!')
+
+
+# 1998년생인 내가 태국에서는 2541년생?! (18108번)
+
+byear = int(input())
+print(byear-543)
 
 
 
