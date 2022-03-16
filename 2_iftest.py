@@ -62,6 +62,38 @@ if M < 0:
 print(H, M)
 
 
+# 오븐 시계 (2525)
+
+A, B = map(int, input().split())
+C = int(input())
+
+A += C // 60
+B += C % 60
+
+if B >= 60:
+    A += 1
+    B -= 60
+if A >= 24:
+    A -= 24
+
+print(A, B)
 
 
+# 주사위 세개 (2480)
+
+
+A, B, C = map(int, input().split())
+
+if A == B and B == C and C == A:
+    price = 10000 + (A * 1000)
+elif A == B:
+    price = 1000 + (A * 100)
+elif B == C:
+    price = 1000 + (B * 100)
+elif C == A:
+    price = 1000 + (C * 100)
+else:
+    price = max(A, B, C) * 100
+
+print(price)
 
