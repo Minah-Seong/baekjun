@@ -65,5 +65,62 @@ for i in range(0, n):
 print(sum(new_score)/len(new_score))
 
 
+# OX퀴즈 (8958번)
+
+# "OOXXOXXOOO"와 같은 OX퀴즈의 결과가 있다. O는 문제를 맞은 것이고, X는 문제를 틀린 것이다. 문제를 맞은 경우 그 문제의 점수는 그 문제까지 연속된 O의 개수가 된다. 예를 들어, 10번 문제의 점수는 3이 된다.
+# "OOXXOXXOOO"의 점수는 1+2+0+0+1+0+0+1+2+3 = 10점이다.
+# OX퀴즈의 결과가 주어졌을 때, 점수를 구하는 프로그램을 작성하시오.
+
+n = int(input())
+
+for _ in range(n):
+    count = 0
+    score = 0
+    quiz = list(input())
+    for i in quiz:
+        if i == 'O':
+            count += 1
+            score += count
+        else:
+            count = 0
+    print(score)
+
+# 처음 이 문제를 접했을 때, 어떻게 풀어야 할지 많은 고민을 했다.
+#
+# O일 때, 연속하여 몇 번 O가 들어왔는지 카운트한다.
+# O일 때, 임의의 변수에 카운트한 수를 더한다.
+# X일 때, 카운트한 수를 0으로 초기화 한다.
+# 위의 3가지가 이 문제를 푸는 핵심 생각이라고 본다.
+
+
+# 평균은 넘겠지 (4344번)
+
+# 첫째 줄에는 테스트 케이스의 개수 C가 주어진다.
+# 둘째 줄부터 각 테스트 케이스마다 학생의 수 N(1 ≤ N ≤ 1000, N은 정수)이 첫 수로 주어지고, 이어서 N명의 점수가 주어진다. 점수는 0보다 크거나 같고, 100보다 작거나 같은 정수이다.
+# 각 케이스마다 한 줄씩 평균을 넘는 학생들의 비율을 반올림하여 소수점 셋째 자리까지 출력한다.
+
+
+n = int(input())
+for _ in range(n):
+    upper = []
+    score = list(map(int, input().split()))
+    a = score[0]
+    del score[0]
+    mean = sum(score)/a
+    for i in score:
+        if i > mean:
+            upper.append(i)
+    b = len(upper)
+    per = b/a*100
+    print('%.3f%%' % per)
+
+
+
+
+
+
+
+
+
 
 
