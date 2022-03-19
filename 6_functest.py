@@ -21,4 +21,18 @@ solve([1,2,3,4,5])
 # 10000보다 작거나 같은 셀프 넘버를 한 줄에 하나씩 출력하는 프로그램을 작성하시오.
 
 
+numbers = set(range(1,10000))
+remove_set = set()
+for num in numbers:
+    for n in str(num):
+        num += int(n)
+    remove_set.add(num)
 
+self_numbers = numbers - remove_set
+for self_num in sorted(self_numbers):
+    print(self_num)
+
+
+# set = 집합함수 / .add(num) 집합에 요소를 추가할 때
+# 리스트 정렬 .sort() 메서드 또는 .sorted()
+# str(num) 숫자 형태로는 각 자릿수를 분리할 수 없기 때문
