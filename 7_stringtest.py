@@ -8,3 +8,19 @@ print(ord(str1))
 
 # 숫자의 합 (11720번)
 
+n = int(input())
+numbers = int(input())
+a = 0
+for i in str(numbers):
+    a += int(i)
+print(a)
+
+
+
+
+
+
+
+
+
+
