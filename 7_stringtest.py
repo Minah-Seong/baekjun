@@ -30,8 +30,19 @@ for i in alpha_list:
         print(-1, end=' ')
 
 
+# 문자열 반복 (2675번)
+
+n = int(input())
+for _ in range(n):
+    ex = input().split()
+    num = int(ex[0])
+    word = list(ex[1])
+    for i in word:
+        print(i*num, end='')
+    print()
 
 
+# 단어 공부 (1157번)
 
 
 
