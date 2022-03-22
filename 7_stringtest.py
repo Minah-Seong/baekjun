@@ -57,3 +57,23 @@ if cnt_list.count(max(cnt_list)) > 1 :  # count 숫자 최대값이 중복되면
 else :
     max_index = cnt_list.index(max(cnt_list))  # count 숫자 최대값 인덱스(위치)
     print(unique_words[max_index])
+
+
+# 단어의 개수 (1152번)
+
+sen = input()
+my_list = sen.split()
+print(len(my_list))
+
+
+# 상수 (2908번)
+
+nums = map(int, input().split())
+new_nums = []
+for n in nums:
+    a = str(n)
+    b = list(a)
+    c = list(map(int, b))
+    new_n = c[0] + (10 * c[1]) + (100 * c[2])
+    new_nums.append(new_n)
+print(max(new_nums))
