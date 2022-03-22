@@ -16,6 +16,18 @@ for i in str(numbers):
 print(a)
 
 
+# 알파벳 찾기 (10809번)
+
+from string import ascii_lowercase
+
+alpha_list = list(ascii_lowercase)
+word = input()
+word_list = list(word)
+for i in alpha_list:
+    if i in word_list:
+        print(word_list.index(i), end=' ')
+    else:
+        print(-1, end=' ')
 
 
 
