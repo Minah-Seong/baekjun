@@ -141,3 +141,14 @@ for i in gm:
             if k == i:
                 t = t + 2 + dial_text.index(j)
 print(t)
+
+
+# 크로아티아 알파벳 (2941번)
+
+c_alpha = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+
+search = input()
+for i in c_alpha:
+    search = search.replace(i, '*')
+
+print(len(search))
