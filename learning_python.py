@@ -27,3 +27,10 @@ print(2 * b - a)
 a, b = map(int, input().split())
 print(a*b-1)
 
+
+# 오늘 날짜 (10699번)
+
+from datetime import datetime
+
+today = str(datetime.now())[:10]
+print(today)
