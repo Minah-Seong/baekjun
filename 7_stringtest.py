@@ -152,3 +152,31 @@ for i in c_alpha:
     search = search.replace(i, '*')
 
 print(len(search))
+
+
+# 그룹 단어 체커 (1316번)
+
+# 그룹 단어란 단어에 존재하는 모든 문자에 대해서, 각 문자가 연속해서 나타나는 경우만을 말한다.
+# 예를 들면, ccazzzzbb는 c, a, z, b가 모두 연속해서 나타나고, kin도 k, i, n이 연속해서 나타나기 때문에 그룹 단어이지만, aabbbccb는 b가 떨어져서 나타나기 때문에 그룹 단어가 아니다.
+# 단어 N개를 입력으로 받아 그룹 단어의 개수를 출력하는 프로그램을 작성하시오.
+
+n = int(input())
+group_word = []
+for _ in range(n):
+    word = input()
+    word_list = list(word)
+    count = 0
+    for i in range(len(word_list) - 1):
+        if word_list[i] != word_list[i + 1]:
+            new_word = word_list[i + 1:]
+            if word_list[i] in new_word:
+                count += 1
+    if count == 0:
+        group_word.append(word)
+
+print(len(group_word))
+
+
+
+
+
