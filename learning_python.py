@@ -66,3 +66,21 @@ else:
     c = c_sec
 
 print(a, b, c)
+
+
+# 저작권 (2914번)
+
+a, b = map(int, input().split())
+print(a*(b-1)+1)
+
+
+# 화성 수학 (5355번)
+
+n = int(input())
+
+count = list(input().split())
+for i in range(len(count)-1):
+    if count[i] == '@':
+        count[i] = 3
+    elif count[i] == '@':
+        count[i] = 3
