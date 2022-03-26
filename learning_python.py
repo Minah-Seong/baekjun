@@ -77,10 +77,21 @@ print(a*(b-1)+1)
 # 화성 수학 (5355번)
 
 n = int(input())
+for _ in range(n):
+    count = list(map(str, input().split()))
+    result = 0
+    for i in range(len(count)):
+        if i == 0:
+            result += float(count[i])
+        else:
+            if count[i] == '@':
+                result *= 3
+            elif count[i] == '#':
+                result -= 7
+            elif count[i] == '%':
+                result += 5
+    print("%0.2f" % result)
 
-count = list(input().split())
-for i in range(len(count)-1):
-    if count[i] == '@':
-        count[i] = 3
-    elif count[i] == '@':
-        count[i] = 3
+
+
+
